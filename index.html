@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;scala&quot;,&quot;java&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -209,12 +209,10 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
+      <img src="images/fox_64.png" class="logo" alt="Fox 64" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="scala">scala</a>
+              <a href="#" data-language-name="java">java</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -225,279 +223,372 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+            <a href="#variables-amp-values" class="toc-h1 toc-link" data-title="Variables &amp; Values">Variables &amp; Values</a>
           </li>
           <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#functions" class="toc-h1 toc-link" data-title="Functions">Functions</a>
+          </li>
+          <li>
+            <a href="#methods" class="toc-h1 toc-link" data-title="Methods">Methods</a>
+          </li>
+          <li>
+            <a href="#arrays" class="toc-h1 toc-link" data-title="Arrays">Arrays</a>
+          </li>
+          <li>
+            <a href="#if-else-statements" class="toc-h1 toc-link" data-title="If/Else Statements">If/Else Statements</a>
+          </li>
+          <li>
+            <a href="#loops" class="toc-h1 toc-link" data-title="Loops">Loops</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#while-loops" class="toc-h2 toc-link" data-title="While Loops">While Loops</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#do-while-loop" class="toc-h2 toc-link" data-title="Do-While Loop">Do-While Loop</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#for-loops" class="toc-h2 toc-link" data-title="For Loops">For Loops</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#classes" class="toc-h1 toc-link" data-title="Classes">Classes</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#class-constructors" class="toc-h2 toc-link" data-title="Class Constructors">Class Constructors</a>
+                  </li>
+                  <li>
+                    <a href="#abstract-classes" class="toc-h2 toc-link" data-title="Abstract Classes">Abstract Classes</a>
+                  </li>
+                  <li>
+                    <a href="#case-classes" class="toc-h2 toc-link" data-title="Case Classes">Case Classes</a>
+                  </li>
+                  <li>
+                    <a href="#objects" class="toc-h2 toc-link" data-title="Objects">Objects</a>
+                  </li>
+                  <li>
+                    <a href="#traits" class="toc-h2 toc-link" data-title="Traits">Traits</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#collections" class="toc-h1 toc-link" data-title="Collections">Collections</a>
+          </li>
+          <li>
+            <a href="#scalafx" class="toc-h1 toc-link" data-title="ScalaFX">ScalaFX</a>
+          </li>
+          <li>
+            <a href="#additional-resources" class="toc-h1 toc-link" data-title="Additional Resources">Additional Resources</a>
+          </li>
+          <li>
+            <a href="#credits" class="toc-h1 toc-link" data-title="Credits">Credits</a>
+          </li>
+          <li>
+            <a href="#cheatsheet" class="toc-h1 toc-link" data-title="Cheatsheet">Cheatsheet</a>
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/JasonNeo/'>Made by Jason Neo</a></li>
             <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+        <aside class="warning">
+This is a work-in-progress, if you'd like to contribute let me know!
+</aside>
+<h1 id='introduction'>Introduction</h1>
+<p>Welcome to the Java To Scala! This is aimed at Java developers who are new to the Scala programming language.</p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>Each section contains code examples for both Scala and Java! You can view the code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 
 <p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
+<h1 id='variables-amp-values'>Variables &amp; Values</h1>
+<p>Scala has two types of variables: 1. Values and 2. variables. A value variable is really just a constant, meaning once assigned, you cannot change its value (immutable). A regular variable on the other hand, is mutable, meaning you can change its value (reassigning).</p>
+
+<p>When you assign an initial value to a variable, the Scala compiler can automatically figure out the <code>type</code> of the varible based on the value assigned to it. This is called <strong>type inference</strong>.</p>
+
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>Variables &amp; Values</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<pre class="highlight scala tab-scala"><code><span class="k">var</span> <span class="n">myVar</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">val</span> <span class="n">myVal</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<span class="n">myVal</span> <span class="k">=</span> <span class="mi">3</span> <span class="c1">// Reassignment to val gives you an error
+</span></code></pre>
+<p>If, however, you did not assign an initial value to the variable, the compiler cannot figure out what type it is. Therefore, you have to explicitly specify the type if you do not assign an initial value to the variable. Here is how it looks: </p>
+<pre class="highlight scala tab-scala"><code><span class="k">var</span> <span class="n">myVar</span> <span class="k">:</span><span class="kt">Int</span><span class="o">;</span>
+<span class="k">val</span> <span class="n">myVal</span> <span class="k">:</span><span class="kt">Int</span><span class="o">;</span>
+</code></pre><h1 id='functions'>Functions</h1>
+<p>Functions are expressions that take parameters. They can be assigned to an object <code>(val/var)</code> to be reused.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<blockquote>
+<p>Functions</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">val</span> <span class="n">addOne</span> <span class="k">=</span> <span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">println</span><span class="o">(</span><span class="n">addOne</span><span class="o">(</span><span class="mi">1</span><span class="o">))</span> <span class="c1">// 2
+</span></code></pre><h1 id='methods'>Methods</h1>
+<p>Methods look and behave very similar to functions, but there are a few key differences between them.</p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<p>Methods are defined with the def keyword. def is followed by a name, parameter lists, a return type, and a body.</p>
+
+<p><code>def methodName ([list of parameters]) : [return type]</code></p>
+
+<blockquote>
+<p>Methods</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">def</span> <span class="n">ellipse</span><span class="o">(</span><span class="n">original</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="n">maxLength</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="s">"Not implemented yet"</span><span class="o">;</span>
+<span class="o">}</span>
 </code></pre>
+<p>In Scala, the compiler can automatically infer the return type from what is being returned. However, it can’t infer the types of the parameters so we’ll have to leave those explicit specifications in.</p>
+
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+<p>Automatically infer return type</p>
 </blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">def</span> <span class="n">ellipse</span><span class="o">(</span><span class="n">original</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="n">maxLength</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="s">"Not implemented yet"</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre>
+<p>If we don’t use the return statement, the compiler will just assume that we want to return the value of the last statement. However, if we want to return from the middle of a method the <code>return</code> keyword is needed.</p>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<blockquote>
+<p>Automatically infer return statement</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">def</span> <span class="n">ellipse</span><span class="o">(</span><span class="n">original</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="n">maxLength</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="s">"Not implemented yet"</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre>
+<p>To know more about Scala methods, click <a href="http://joelabrahamsson.com/learning-scala-part-five-methods/">here</a>.</p>
+<h1 id='arrays'>Arrays</h1>
+<p>In Scala arrays are immutable objects. You create an array like this: </p>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p><strong>Instantiation &amp; Initialization</strong></p>
 
-<p><code>Authorization: meowmeowmeow</code></p>
+<p><code>var myArray : Array[String] = new Array[String](10);</code></p>
 
+<p><strong>Accessing Array Elements</strong></p>
+
+<p><code>var aString : String = myArray(0);</code></p>
+
+<p><strong>Assignment</strong></p>
+
+<p><code>myArray(0) = &quot;some value&quot;;</code></p>
+<h1 id='if-else-statements'>If/Else Statements</h1>
+<p>The Scala if command executes a certain block of code, if a certain condition is true. Here is an example:</p>
+
+<blockquote>
+<p>If/Else Statements</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">var</span> <span class="n">myInt</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">if</span><span class="o">(</span><span class="n">myInt</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">println</span><span class="o">(</span><span class="s">"myInt equals to 0!"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+Omitting { } in if - statements
+Like in Java it is possible to omit the {} in an if-statement around the code to execute, if the code consists of a single line.
 </aside>
 
-<p>The Kittn API uses the following error codes:</p>
+<blockquote>
+<p>Omitting {}</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">var</span> <span class="n">myInt</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="k">if</span><span class="o">(</span><span class="n">myInt</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+  <span class="n">println</span><span class="o">(</span><span class="s">"myInt == 0"</span><span class="o">);</span>
+ <span class="k">else</span>
+  <span class="n">println</span><span class="o">(</span><span class="s">"myInt != 0"</span><span class="o">);</span>
+</code></pre><h1 id='loops'>Loops</h1><h2 id='while-loops'>While Loops</h2>
+<blockquote>
+<p>While Loops</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">var</span> <span class="n">input</span> <span class="k">=</span> <span class="s">""</span>
+<span class="k">while</span><span class="o">(</span><span class="n">input</span> <span class="o">!=</span> <span class="s">"exit"</span><span class="o">)</span>
+    <span class="n">input</span> <span class="k">=</span> <span class="n">readLine</span><span class="o">();</span>
+</code></pre><h2 id='do-while-loop'>Do-While Loop</h2>
+<blockquote>
+<p>Do-While Loop</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">var</span> <span class="n">input</span> <span class="k">=</span> <span class="s">"exit"</span>
+<span class="k">do</span> <span class="o">{</span>
+    <span class="n">input</span> <span class="k">=</span> <span class="n">readLine</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">while</span><span class="o">(</span><span class="n">input</span> <span class="o">!=</span> <span class="s">"exit"</span><span class="o">)</span>
+</code></pre><h2 id='for-loops'>For Loops</h2>
+<p>The for loop in Scala is referred to as “for comprehension” or “for expression” in the Scala community and it can do some pretty funky stuff. Let’s begin by creating a simple Person class and a list of Person instances:</p>
 
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
-</tr>
-</tbody></table>
+<blockquote>
+<p>For Loops</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">class</span> <span class="nc">Person</span><span class="o">(</span><span class="k">val</span> <span class="n">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="k">val</span> <span class="n">female</span><span class="k">:</span> <span class="kt">Boolean</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">people</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nc">Person</span><span class="o">(</span><span class="s">"Cliff Barnes"</span><span class="o">,</span> <span class="kc">false</span><span class="o">),</span>
+    <span class="k">new</span> <span class="nc">Person</span><span class="o">(</span><span class="s">"J. R. Ewing"</span><span class="o">,</span> <span class="kc">false</span><span class="o">),</span>
+    <span class="k">new</span> <span class="nc">Person</span><span class="o">(</span><span class="s">"Sue Ellen Ewing"</span><span class="o">,</span> <span class="kc">true</span><span class="o">))</span>
+</code></pre>
+<p>We can traverse the list, “comprehending” each instance using a for loop that syntactically is very similar to Java’s.</p>
+<pre class="highlight scala tab-scala"><code><span class="k">for</span><span class="o">(</span><span class="n">person</span> <span class="k">&lt;-</span> <span class="n">people</span><span class="o">)</span>
+    <span class="n">println</span><span class="o">(</span><span class="n">person</span><span class="o">.</span><span class="n">name</span><span class="o">)</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="k">for</span><span class="o">(</span><span class="n">Person</span> <span class="n">person</span> <span class="o">:</span> <span class="n">people</span><span class="o">)</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">person</span><span class="o">.</span><span class="na">name</span><span class="o">);</span>
+</code></pre>
+<p>As we can see the for loop is very similar to Java’s, except it doesn’t require us to specify the type of the temporary variable as the compiler can infer it and the : operator is replaced with the &lt;- operator. The &lt;- operator is called a generator and a Scala for expression must always start with a generator which specifies which collection of objects to iterate over and a temporary variable that holds the current object.</p>
+<h3 id='filtering'>Filtering</h3>
+<p>Let’s say that we only want to print the names of the women in the collection. We can add a filter for that.</p>
+
+<blockquote>
+<p>Filtering</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">for</span><span class="o">(</span><span class="n">person</span><span class="k">:</span> <span class="kt">Person</span> <span class="kt">&lt;-</span> <span class="kt">people</span>
+    <span class="k">if</span> <span class="n">person</span><span class="o">.</span><span class="n">female</span><span class="o">)</span>
+    <span class="n">println</span><span class="o">(</span><span class="n">person</span><span class="o">.</span><span class="n">name</span><span class="o">)</span>
+</code></pre><h3 id='yielding'>Yielding</h3>
+<p>Using the yield keyword we can use for expressions to create new collections. The code on the right creates a new collection named <code>names</code> containing all of the names of the people in the collection of <code>Persons</code>.</p>
+
+<blockquote>
+<p>Yielding</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">val</span> <span class="n">names</span> <span class="k">=</span> <span class="k">for</span><span class="o">(</span><span class="n">person</span> <span class="k">&lt;-</span> <span class="n">people</span><span class="o">)</span> <span class="k">yield</span> <span class="n">person</span><span class="o">.</span><span class="n">name</span>
+<span class="k">for</span><span class="o">(</span><span class="n">name</span> <span class="k">&lt;-</span> <span class="n">names</span><span class="o">)</span> <span class="n">println</span><span class="o">(</span><span class="n">name</span><span class="o">)</span>
+</code></pre><h1 id='classes'>Classes</h1>
+<p>Scala classes are very much like Java classes, with some differences mainly in how we declare constructors.</p>
+
+<blockquote>
+<p>Declaration and Instantiation</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">class</span> <span class="nc">Greeter</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="nc">SayHi</span><span class="o">()</span> <span class="k">=</span> <span class="n">println</span><span class="o">(</span><span class="s">"Hello world!"</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">var</span> <span class="n">greeter</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Greeter</span><span class="o">()</span>
+<span class="n">greeter</span><span class="o">.</span><span class="nc">SayHi</span><span class="o">()</span> <span class="c1">// "Hello world!"
+</span></code></pre><h2 id='class-constructors'>Class Constructors</h2><h3 id='primary-constructors'>Primary Constructors</h3>
+<p>In Scala the primary constructor is the class’ body and it’s parameter list comes right after the class name.</p>
+
+<blockquote>
+<p>Primary Constructors</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">class</span> <span class="nc">Greeter</span><span class="o">(</span><span class="n">message</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="nc">SayHi</span><span class="o">()</span> <span class="k">=</span> <span class="n">println</span><span class="o">(</span><span class="n">message</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">val</span> <span class="n">greeter</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Greeter</span><span class="o">(</span><span class="s">"Hello world!"</span><span class="o">)</span>
+<span class="n">greeter</span><span class="o">.</span><span class="nc">SayHi</span><span class="o">()</span> <span class="c1">// "Hello world!"
+</span></code></pre>
+<p>The compiler automatically creates a field for us. By default, the field is set as val (immutable) and it’s access is public.</p>
+<h3 id='auxiliary-constructors'>Auxiliary Constructors</h3>
+<p>We are free to add as many additional auxiliary constructors as we want. However, an auxiliary constructor must be on the first line of it’s body, and call either another auxiliary constructor that has been declared before it or the primary constructor.</p>
+
+<p><code>this()</code></p>
+
+<blockquote>
+<p>Auxiliary Constructors</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">class</span> <span class="nc">Greeter</span><span class="o">(</span><span class="n">message</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="n">secondaryMessage</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="k">this</span><span class="o">(</span><span class="n">message</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">=</span> <span class="k">this</span><span class="o">(</span><span class="n">message</span><span class="o">,</span> <span class="s">""</span><span class="o">)</span> <span class="c1">// Auxiliary Constructor
+</span>
+    <span class="k">def</span> <span class="nc">SayHi</span><span class="o">()</span> <span class="k">=</span> <span class="n">println</span><span class="o">(</span><span class="n">message</span> <span class="o">+</span> <span class="n">secondaryMessage</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre><h2 id='abstract-classes'>Abstract Classes</h2>
+<p>An abstract class can have abstract methods and non-abstract methods as well. Abstract class is used to achieve abstraction. Abstraction is a process in which we hide complex implementation details and show only functionality to the user.</p>
+
+<blockquote>
+<p>Abstract Classes</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">abstract</span> <span class="k">class</span> <span class="nc">Greeter</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">message</span><span class="k">:</span> <span class="kt">String</span>
+    <span class="k">def</span> <span class="nc">SayHi</span><span class="o">()</span> <span class="k">=</span> <span class="n">println</span><span class="o">(</span><span class="n">message</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">SwedishGreeter</span> <span class="k">extends</span> <span class="nc">Greeter</span><span class="o">{</span>
+    <span class="n">message</span> <span class="k">=</span> <span class="s">"Hej världen!"</span>
+<span class="o">}</span>
+
+<span class="k">val</span> <span class="n">greeter</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">SwedishGreeter</span><span class="o">()</span>
+<span class="n">greeter</span><span class="o">.</span><span class="nc">SayHi</span><span class="o">()</span>
+</code></pre><h2 id='case-classes'>Case Classes</h2>
+<p>Scala has a special type of class called a “case” class. By default, case classes are immutable and compared by value.</p>
+
+<p><code>case class Point(x: Int, y: Int)</code></p>
+
+<p>You can instantiate case classes without new keyword.</p>
+
+<p><code>val point = Point(1, 2)</code></p>
+
+<p>To learn more on Scala case class, click <a href="https://www.alessandrolacava.com/blog/scala-case-classes-in-depth/">here</a></p>
+<h2 id='objects'>Objects</h2>
+<p>Objects are single instances of their own definitions. Also known as singleton objects.</p>
+
+<blockquote>
+<p>Objects</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">object</span> <span class="nc">IdFactory</span> <span class="o">{</span>
+  <span class="k">private</span> <span class="k">var</span> <span class="n">counter</span> <span class="k">=</span> <span class="mi">0</span>
+  <span class="k">def</span> <span class="n">create</span><span class="o">()</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">counter</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<p>You can access an object by referring to its name.</p>
+<pre class="highlight scala tab-scala"><code><span class="k">val</span> <span class="n">newId</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="nc">IdFactory</span><span class="o">.</span><span class="n">create</span><span class="o">()</span>
+<span class="n">println</span><span class="o">(</span><span class="n">newId</span><span class="o">)</span> <span class="c1">// 1
+</span><span class="k">val</span> <span class="n">newerId</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="nc">IdFactory</span><span class="o">.</span><span class="n">create</span><span class="o">()</span>
+<span class="n">println</span><span class="o">(</span><span class="n">newerId</span><span class="o">)</span> <span class="c1">// 2
+</span></code></pre><h2 id='traits'>Traits</h2>
+<p>Traits are used to share interfaces and fields between classes. They are similar to Java 8’s interfaces. Classes and objects can extend traits but traits cannot be instantiated and therefore have no parameters.</p>
+
+<p>An awesome <a href="http://joelabrahamsson.com/learning-scala-part-seven-traits/">post</a> by Joel Abrahamsson describes the importance of traits.</p>
+<h3 id='defining-a-trait'>Defining a trait</h3>
+<p>A minimal trait is simply the keyword trait and an identifier:</p>
+
+<blockquote>
+<p>Traits</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">trait</span> <span class="nc">HairColor</span>
+</code></pre><h3 id='using-traits'>Using traits</h3>
+<p>Use the <code>extends</code> keyword to extend a trait. Then implement any abstract members of the trait using the <code>override</code> keyword.</p>
+
+<blockquote>
+<p>Using traits</p>
+</blockquote>
+<pre class="highlight scala tab-scala"><code><span class="k">trait</span> <span class="nc">Iterator</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">hasNext</span><span class="k">:</span> <span class="kt">Boolean</span>
+  <span class="k">def</span> <span class="n">next</span><span class="o">()</span><span class="k">:</span> <span class="kt">A</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">IntIterator</span><span class="o">(</span><span class="n">to</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Iterator</span><span class="o">[</span><span class="kt">Int</span><span class="o">]</span> <span class="o">{</span>
+  <span class="k">private</span> <span class="k">var</span> <span class="n">current</span> <span class="k">=</span> <span class="mi">0</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">hasNext</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="n">current</span> <span class="o">&lt;</span> <span class="n">to</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">next</span><span class="o">()</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">hasNext</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">val</span> <span class="n">t</span> <span class="k">=</span> <span class="n">current</span>
+      <span class="n">current</span> <span class="o">+=</span> <span class="mi">1</span>
+      <span class="n">t</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="mi">0</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+
+<span class="k">val</span> <span class="n">iterator</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">IntIterator</span><span class="o">(</span><span class="mi">10</span><span class="o">)</span>
+<span class="n">iterator</span><span class="o">.</span><span class="n">next</span><span class="o">()</span>  <span class="c1">// returns 0
+</span><span class="n">iterator</span><span class="o">.</span><span class="n">next</span><span class="o">()</span>  <span class="c1">// returns 1
+</span></code></pre><h1 id='collections'>Collections</h1><h1 id='scalafx'>ScalaFX</h1><h1 id='additional-resources'>Additional Resources</h1>
+<ol>
+<li>http://tutorials.jenkov.com/scala/index.html</li>
+<li>https://docs.scala-lang.org/</li>
+</ol>
+<h1 id='credits'>Credits</h1>
+<p>Icons made by <a href="https://www.flaticon.com/authors/photo3idea-studio">photo3idea_studio</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0 BY</a></p>
+<h1 id='cheatsheet'>Cheatsheet</h1>
+<p>Quick reference of Scala syntax.</p>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="scala">scala</a>
+                <a href="#" data-language-name="java">java</a>
           </div>
       </div>
     </div>
